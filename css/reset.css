@@ -1,0 +1,19 @@
+/* 最简单的重置示例 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 更全面的重置（Eric Meyer's Reset） */
+html, body, div, span, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, em, img, strong, sub, sup, 
+ol, ul, li, fieldset, form, label, legend, table, 
+caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}

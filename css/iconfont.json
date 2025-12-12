@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7898615",
+      "name": "返回，上一个，下一个",
+      "font_class": "huaban",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "8288837",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e848",
+      "unicode_decimal": 59464
+    },
+    {
+      "icon_id": "20286360",
+      "name": "上一张",
+      "font_class": "shangyizhang-copy-copy",
+      "unicode": "e523",
+      "unicode_decimal": 58659
+    }
+  ]
+}
