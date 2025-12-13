@@ -90,3 +90,30 @@ for(let i =0;i<lis.length;i++)
     }
 ]
 
+// 滚动条
+let header = document.querySelector('.header')
+
+let banner = document.querySelector('.banner')
+
+let elevtor = document.querySelector('.elevtor')
+
+let headerHeight = header.offsetHeight;
+
+let bannerHeight = banner.offsetHeight;
+
+document.onscroll = function(){
+    let top = document.documentElement.scrollTop;
+    // 判断是否变成固定定位
+if (top>= headerHeight + bannerHeight){
+   elevtor.className = 'elevtor elevtor-fix';
+}else{
+    elevtor.className = 'elevtor';
+}
+}
+
+
+
+
+
+
+
