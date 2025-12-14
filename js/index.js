@@ -101,6 +101,23 @@ let headerHeight = header.offsetHeight;
 
 let bannerHeight = banner.offsetHeight;
 
+let items = document.querySelectorAll('.content .items')
+let elevtorA = document.querySelectorAll('.elevtor a')
+let elevtorArr = [];
+
+let base = header.offsetHeight + banner.offsetHeight;
+
+for(let i = 0;i<items.length;i++){
+    base = base + items[i].offsetHeight
+    elevtorArr.push(base);
+}
+
+function clearColor(){
+    for(let i = 0;i<elevtorA.length;i++){
+        elevtorA[i].style.color = ''
+    }
+}
+
 document.onscroll = function(){
     let top = document.documentElement.scrollTop;
     // 判断是否变成固定定位
@@ -109,6 +126,29 @@ if (top>= headerHeight + bannerHeight){
 }else{
     elevtor.className = 'elevtor';
 }
+
+//滚动到特定区域变色
+if(top<headerHeight + bannerHeight){
+   clearColor(); 
+}
+
+else if(top>= headerHeight + bannerHeight && top<elevtorArr[0]){
+    clearColor();
+    elevtorA[0].style.color = 'red';
+}
+else if(top>= elevtorArr[0] && top<elevtorArr[1]){
+    clearColor();
+    elevtorA[1].style.color = 'red';
+}
+else if(top>= elevtorArr[1] && top<elevtorArr[2]){
+    clearColor();
+    elevtorA[2].style.color = 'red';
+}
+else if(top>= elevtorArr[2] && top<elevtorArr[3]){
+    clearColor();
+    elevtorA[3].style.color = 'red';
+}
+
 }
 
 
