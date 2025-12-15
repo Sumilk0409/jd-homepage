@@ -3,7 +3,7 @@ let keyword = document.querySelector('.keyword');
 
 let searchHelper = document.querySelector('.search-helper');
 
-let searchArr = ['纯情猫娘杯','柔情猫娘卜够爽杯','网易春风杯','傻杯'];
+let searchArr = ['苹果手机','安卓手机','小灵通手机','二手手机'];
 
 keyword.oninput = function(){
     searchHelper.innerHTML = '';
@@ -105,7 +105,14 @@ let items = document.querySelectorAll('.content .items')
 let elevtorA = document.querySelectorAll('.elevtor a')
 let elevtorArr = [];
 
+
 let base = header.offsetHeight + banner.offsetHeight;
+
+let search = document.querySelector('.search')
+let searchBox = document.querySelector('.search-box')
+let form = document.querySelector('.form')
+let searchLogo = document.querySelector('.search-logo')
+
 
 for(let i = 0;i<items.length;i++){
     base = base + items[i].offsetHeight
@@ -123,15 +130,22 @@ document.onscroll = function(){
     // 判断是否变成固定定位
 if (top>= headerHeight + bannerHeight){
    elevtor.className = 'elevtor elevtor-fix';
+   search.className = 'search search-fix'
+   searchBox.style.height = '50px'
+   form.style.top = '8px'
+   searchLogo.style.display = 'block'
 }else{
     elevtor.className = 'elevtor';
+    search.className = 'search'
+    searchBox.style.height = '60px'
+    form.style.top = '25px'
+    searchLogo.style.display = 'none'
 }
 
 //滚动到特定区域变色
 if(top<headerHeight + bannerHeight){
    clearColor(); 
 }
-
 else if(top>= headerHeight + bannerHeight && top<elevtorArr[0]){
     clearColor();
     elevtorA[0].style.color = 'red';
